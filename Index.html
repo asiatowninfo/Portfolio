@@ -1,0 +1,1322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#070a12" />
+  <meta name="color-scheme" content="dark light" />
+
+  <title>Shaikh Abdullah — Marketing Manager (Import/Export)</title>
+  <meta name="description" content="Professional portfolio of Shaikh Abdullah — Marketing Manager specializing in import/export documentation, customer relations, and logistics coordination." />
+
+  <!-- Professional portfolios typically build trust via clear About/Skills/Experience/Contact and streamlined navigation. [web:24] -->
+  <!-- Respect user motion preferences using prefers-reduced-motion to reduce/disable animations. [web:27] -->
+  <!-- With glassmorphism, keep strong contrast and use overlays; blur alone doesn’t guarantee readability. [web:32] -->
+
+  <style>
+    :root{
+      --bg0:#050713;
+      --bg1:#0b1224;
+      --card: rgba(255,255,255,.08);
+      --card2: rgba(255,255,255,.12);
+      --stroke: rgba(255,255,255,.14);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --faint: rgba(255,255,255,.56);
+
+      --a:#22d3ee; /* cyan */
+      --b:#7c3aed; /* violet */
+      --c:#f472b6; /* pink */
+      --good:#34d399;
+
+      --shadow: 0 22px 80px rgba(0,0,0,.55);
+      --glow: 0 0 0 1px rgba(255,255,255,.10) inset, 0 0 44px rgba(34,211,238,.14);
+      --ring: 0 0 0 3px rgba(34,211,238,.22), 0 0 0 1px rgba(124,58,237,.30) inset;
+
+      --radius: 18px;
+      --radius2: 26px;
+
+      --max: 1120px;
+      --pad: clamp(16px, 2.4vw, 28px);
+    }
+
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg0:#f7f8ff;
+        --bg1:#eef2ff;
+        --card: rgba(255,255,255,.74);
+        --card2: rgba(255,255,255,.86);
+        --stroke: rgba(17,24,39,.12);
+        --text: rgba(17,24,39,.92);
+        --muted: rgba(17,24,39,.66);
+        --faint: rgba(17,24,39,.50);
+        --shadow: 0 26px 65px rgba(15,23,42,.14);
+        --glow: 0 0 0 1px rgba(17,24,39,.08) inset, 0 0 34px rgba(124,58,237,.10);
+      }
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(1100px 820px at 14% 10%, rgba(34,211,238,.18), transparent 58%),
+        radial-gradient(1200px 860px at 84% 22%, rgba(124,58,237,.18), transparent 62%),
+        radial-gradient(1100px 860px at 40% 88%, rgba(244,114,182,.14), transparent 62%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      overflow-x:hidden;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+      outline:none;
+      box-shadow: var(--ring);
+      border-color: rgba(34,211,238,.55) !important;
+    }
+
+    .wrap{ max-width: var(--max); margin:0 auto; padding: 0 var(--pad); }
+
+    .skip{
+      position:absolute; left:-999px; top: 10px;
+      padding:10px 12px; background:var(--card2);
+      border:1px solid var(--stroke); border-radius:12px;
+      backdrop-filter: blur(12px);
+      z-index: 9999;
+    }
+    .skip:focus{ left: 10px; }
+
+    /* Ambient */
+    .fx{
+      position:fixed; inset:0;
+      pointer-events:none; z-index:-1;
+    }
+    .grid{
+      position:absolute; inset:0;
+      background:
+        linear-gradient(to right, rgba(255,255,255,.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,.07) 1px, transparent 1px);
+      background-size: 92px 92px;
+      mask-image: radial-gradient(520px 520px at 55% 25%, rgba(0,0,0,.90), transparent 72%);
+      opacity:.18;
+    }
+    canvas#stars{
+      position:absolute; inset:0;
+      width:100%; height:100%;
+      opacity:.50;
+      mix-blend-mode: screen;
+    }
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(180deg, rgba(7,10,18,.76), rgba(7,10,18,.45));
+      border-bottom: 1px solid rgba(255,255,255,.10);
+    }
+    @media (prefers-color-scheme: light){
+      header{
+        background: linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,255,255,.62));
+        border-bottom: 1px solid rgba(15,23,42,.10);
+      }
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 12px 0;
+      gap: 14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight: 900;
+      letter-spacing: .2px;
+      white-space:nowrap;
+    }
+    .logo{
+      width:34px; height:34px; border-radius: 12px;
+      background: radial-gradient(circle at 30% 30%, rgba(34,211,238,.95), rgba(124,58,237,.85) 45%, rgba(244,114,182,.72));
+      box-shadow: 0 0 0 1px rgba(255,255,255,.14) inset, 0 18px 36px rgba(0,0,0,.25);
+      position:relative;
+      overflow:hidden;
+      flex:0 0 auto;
+    }
+    .logo::after{
+      content:"";
+      position:absolute; inset:-14px;
+      background: conic-gradient(from 220deg, rgba(255,255,255,.0), rgba(255,255,255,.33), rgba(255,255,255,.0));
+      transform: rotate(22deg);
+      opacity:.55;
+    }
+
+    nav ul{
+      display:flex; align-items:center; gap: 14px;
+      list-style:none; margin:0; padding:0;
+    }
+    nav a{
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      color: var(--muted);
+      font-weight: 750;
+      font-size: 14px;
+    }
+    nav a:hover{
+      color: var(--text);
+      border-color: rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+    }
+
+    .navActions{ display:flex; gap:10px; align-items:center; }
+    .iconBtn{
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      border-radius: 14px;
+      height: 40px; width: 40px;
+      display:grid; place-items:center;
+      cursor:pointer;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .iconBtn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.20); }
+
+    .pill{
+      display:inline-flex; align-items:center; gap:10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      font-weight: 850;
+      font-size: 14px;
+      cursor:pointer;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+      box-shadow: var(--glow);
+      white-space:nowrap;
+    }
+    .pill:hover{ transform: translateY(-1px); background: rgba(255,255,255,.09); border-color: rgba(255,255,255,.22); }
+
+    .menuBtn{ display:none; }
+    .mobilePanel{ display:none; padding: 0 0 14px; }
+    .mobilePanel a{
+      display:block;
+      margin-top:8px;
+      padding: 12px 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 14px;
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      font-weight: 800;
+    }
+/* Ensure the hidden attribute always wins */
+[hidden] { display: none !important; }
+
+    /* Shared */
+    .card{
+      border-radius: var(--radius2);
+      background: linear-gradient(180deg, var(--card2), var(--card));
+      border: 1px solid var(--stroke);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+    section{
+      padding: clamp(26px, 4.5vw, 54px) 0;
+      content-visibility: auto;
+      contain-intrinsic-size: 820px;
+    }
+    .sectionHead{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap: 18px; flex-wrap:wrap;
+      margin-bottom: 16px;
+    }
+    .sectionHead h2{
+      margin:0;
+      font-size: clamp(22px, 2.6vw, 30px);
+      letter-spacing: -0.02em;
+    }
+    .sectionHead p{
+      margin:0;
+      color: var(--muted);
+      max-width: 70ch;
+      line-height: 1.6;
+      font-size: 14.5px;
+    }
+
+    .reveal{ opacity:0; transform: translateY(12px); filter: blur(4px); }
+    .reveal.in{ opacity:1; transform: translateY(0); filter: blur(0); transition: opacity .6s ease, transform .6s ease, filter .6s ease; }
+    .delay1{ transition-delay: .06s; }
+    .delay2{ transition-delay: .12s; }
+    .delay3{ transition-delay: .18s; }
+
+    .gradientText{
+      background: linear-gradient(90deg, rgba(34,211,238,.95), rgba(124,58,237,.95), rgba(244,114,182,.90));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* Hero */
+    .hero{ padding: clamp(44px, 6vw, 72px) 0 clamp(18px, 4vw, 46px); }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.12fr .88fr;
+      gap: clamp(18px, 3vw, 34px);
+      align-items:stretch;
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      color: var(--muted);
+      font-weight: 750;
+      font-size: 13px;
+      backdrop-filter: blur(12px);
+    }
+    .dot{
+      width:8px; height:8px; border-radius:999px;
+      background: var(--good);
+      box-shadow: 0 0 0 4px rgba(52,211,153,.16);
+    }
+    h1{
+      margin: 14px 0 10px;
+      font-size: clamp(34px, 4.6vw, 58px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+    .lede{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: clamp(15px, 1.5vw, 18px);
+      line-height: 1.65;
+      max-width: 68ch;
+    }
+    .ctaRow{ display:flex; gap: 12px; flex-wrap: wrap; align-items:center; }
+
+    .primary{
+      border: 1px solid rgba(255,255,255,.14);
+      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.03));
+      box-shadow: var(--shadow), var(--glow);
+      padding: 12px 14px;
+    }
+    .secondary{
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      padding: 12px 14px;
+      box-shadow: 0 0 0 1px rgba(255,255,255,.06) inset;
+    }
+
+    .kpiRow{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 12px;
+    }
+    .kpi{
+      padding: 14px 14px;
+      display:flex; flex-direction:column; gap: 6px;
+      min-height: 92px;
+    }
+    .kpi .num{
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+    .kpi .label{
+      color: var(--muted);
+      font-weight: 750;
+      font-size: 13px;
+    }
+
+    .sideCard{
+      padding: 18px;
+      display:flex; flex-direction:column;
+      gap: 14px;
+      overflow:hidden;
+      position:relative;
+    }
+    .sideCard::before{
+      content:"";
+      position:absolute; inset:-1px;
+      background:
+        radial-gradient(460px 260px at 18% 12%, rgba(34,211,238,.20), transparent 60%),
+        radial-gradient(520px 300px at 88% 18%, rgba(124,58,237,.20), transparent 62%),
+        radial-gradient(560px 340px at 54% 95%, rgba(244,114,182,.14), transparent 65%);
+      opacity:.9;
+      pointer-events:none;
+    }
+    .sideCard > *{ position:relative; z-index:1; }
+
+    .profileTop{ display:flex; gap: 14px; align-items:center; }
+    .avatar{
+      width:56px; height:56px; border-radius: 18px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.22), rgba(255,255,255,0) 52%),
+        linear-gradient(135deg, rgba(34,211,238,.85), rgba(124,58,237,.85), rgba(244,114,182,.72));
+      border:1px solid rgba(255,255,255,.18);
+      box-shadow: 0 18px 40px rgba(0,0,0,.35);
+      flex: 0 0 auto;
+    }
+    .name{ font-weight: 950; letter-spacing:-0.01em; }
+    .role{ color: var(--muted); font-weight: 750; margin-top: 2px; font-size: 13px; }
+
+    .chips{ display:flex; flex-wrap:wrap; gap:10px; }
+    .chip{
+      font-size: 12.5px;
+      font-weight: 850;
+      color: var(--text);
+      padding: 8px 10px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+    }
+
+    .miniList{
+      margin:0; padding:0; list-style:none;
+      display:grid; gap:10px;
+    }
+    .miniList li{
+      display:flex; align-items:flex-start; gap:10px;
+      padding: 12px 12px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+    }
+    .miniIcon{
+      width:34px; height:34px; border-radius: 14px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      display:grid; place-items:center;
+      flex: 0 0 auto;
+      box-shadow: 0 0 0 1px rgba(255,255,255,.04) inset;
+    }
+    .miniTitle{
+      font-weight: 900;
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+    .miniText{
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    /* Layout blocks */
+    .twoCol{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      align-items:start;
+    }
+    .panel{ padding: 18px; }
+    .panel h3{ margin:0 0 8px; font-size: 16px; letter-spacing:-0.01em; }
+    .panel p{ margin:0; color: var(--muted); line-height: 1.65; }
+
+    .facts{
+      display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px;
+      margin-top: 14px;
+    }
+    .fact{
+      padding: 14px;
+      border-radius: 18px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+    }
+    .fact .k{ color: var(--muted); font-weight:800; font-size: 12.5px; }
+    .fact .v{ margin-top: 6px; font-weight: 950; letter-spacing:-0.02em; line-height:1.2; }
+
+    .list{
+      margin: 12px 0 0;
+      padding: 0;
+      list-style:none;
+      display:grid; gap: 10px;
+    }
+    .list li{
+      padding: 12px 12px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .list li span{ color: var(--muted); font-weight: 850; }
+
+    .skills{
+      display:flex; flex-wrap:wrap; gap: 10px;
+      margin: 12px 0 0;
+      padding:0; list-style:none;
+    }
+    .skill{
+      padding: 10px 12px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      font-weight: 900;
+      font-size: 13px;
+    }
+    .skill small{ color: var(--muted); font-weight: 800; margin-left: 6px; }
+
+    /* Timeline */
+    .timeline{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .job{
+      padding: 16px;
+      display:grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items:start;
+    }
+    .job h3{ margin:0; font-size: 16px; letter-spacing:-0.01em; }
+    .job p{ margin: 6px 0 0; color: var(--muted); line-height: 1.6; font-size: 14px; }
+    .meta{
+      color: var(--muted);
+      font-weight: 900;
+      font-size: 12.5px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      white-space:nowrap;
+      height: fit-content;
+    }
+
+    /* Contact */
+    .contactGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .contactLinks{
+      display:flex; flex-wrap:wrap; gap: 10px;
+      margin-top: 14px;
+    }
+    .miniBtn{
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 14px;
+      font-weight: 950;
+      font-size: 13px;
+      cursor:pointer;
+    }
+    .miniBtn:hover{ background: rgba(255,255,255,.08); }
+
+    form{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .full{ grid-column: 1 / -1; }
+    label{
+      display:block;
+      color: var(--muted);
+      font-weight: 900;
+      font-size: 12.5px;
+      margin-bottom: 8px;
+    }
+    input, textarea{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      outline:none;
+    }
+    textarea{ min-height: 120px; resize: vertical; }
+    .formRow{ display:flex; gap: 12px; flex-wrap:wrap; align-items:center; justify-content:space-between; }
+    .hint{ color: var(--muted); font-size: 12.5px; line-height: 1.4; }
+
+    footer{
+      padding: 26px 0 40px;
+      border-top: 1px solid rgba(255,255,255,.10);
+      color: var(--muted);
+    }
+    .foot{
+      display:flex; gap: 12px;
+      align-items:center; justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .links{ display:flex; gap: 10px; flex-wrap:wrap; }
+    .links a{
+      padding: 10px 12px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      font-weight: 950;
+      font-size: 13px;
+      color: var(--text);
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      .twoCol{ grid-template-columns: 1fr; }
+      .contactGrid{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px){
+      nav ul{ display:none; }
+      .menuBtn{ display:grid; }
+      .mobilePanel{ display:block; }
+      .kpiRow{ grid-template-columns: 1fr; }
+      form{ grid-template-columns: 1fr; }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      html{ scroll-behavior: auto; }
+      .reveal, .reveal.in{ transition: none !important; transform:none !important; filter:none !important; opacity:1 !important; }
+      .iconBtn, .pill{ transition: none !important; }
+      canvas#stars{ display:none; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Shaikh Abdullah",
+    "nationality":"Pakistani",
+    "email":"mailto:email.asiatown786@gmail.com",
+    "telephone":"+393445631923",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"via Enrico Fermi 7",
+      "postalCode":"00058",
+      "addressLocality":"Santa Marinella",
+      "addressRegion":"RM",
+      "addressCountry":"IT"
+    },
+    "jobTitle":"Marketing Manager",
+    "knowsLanguage":[
+      {"@type":"Language","name":"Urdu"},
+      {"@type":"Language","name":"English"},
+      {"@type":"Language","name":"Italian"}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <div class="fx" aria-hidden="true">
+    <div class="grid"></div>
+    <canvas id="stars"></canvas>
+  </div>
+
+  <header>
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="#top" aria-label="Go to top">
+          <span class="logo" aria-hidden="true"></span>
+          <span>Shaikh Abdullah</span>
+        </a>
+
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="#about">Profile</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#languages">Languages</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="navActions">
+          <button class="iconBtn" id="themeBtn" type="button" aria-label="Toggle accent mode">
+            <span aria-hidden="true">◐</span>
+          </button>
+          <a class="pill" href="#contact" aria-label="Jump to contact">
+            <span aria-hidden="true">✦</span>
+            <span>Contact</span>
+          </a>
+          <button class="iconBtn menuBtn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+            <span aria-hidden="true">≡</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobilePanel" id="mobilePanel" hidden>
+        <a href="#about">Profile</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#languages">Languages</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="wrap" id="top">
+      <section class="hero">
+        <div class="heroGrid">
+          <div class="reveal">
+            <div class="badge">
+              <span class="dot" aria-hidden="true"></span>
+              <span>Marketing Manager • Import/Export • Based in Italy</span>
+            </div>
+
+            <h1>
+              Shaikh Abdullah —
+              <span class="gradientText">Marketing & Trade Operations</span>
+            </h1>
+
+            <p class="lede">
+              Marketing Manager with long-term experience in customer relations, international import/export documentation,
+              and transport material coordination. Strong organizational mindset, multicultural collaboration, and practical problem-solving.
+            </p>
+
+            <div class="ctaRow">
+              <a class="pill primary" href="#experience" aria-label="Go to experience">
+                <strong>View experience</strong>
+                <span aria-hidden="true">→</span>
+              </a>
+              <button class="pill secondary" id="copyEmailBtn" type="button" aria-label="Copy email">
+                <span aria-hidden="true">✉</span>
+                <span>Copy email</span>
+              </button>
+              <a class="pill secondary" href="tel:+393445631923" aria-label="Call phone number">
+                <span aria-hidden="true">☎</span>
+                <span>Call</span>
+              </a>
+            </div>
+
+            <div class="kpiRow">
+              <div class="card kpi reveal delay1">
+                <div class="num" data-count="2005" data-prefix="Since ">—</div>
+                <div class="label">Marketing Manager role</div>
+              </div>
+              <div class="card kpi reveal delay2">
+                <div class="num" data-count="3" data-suffix="">—</div>
+                <div class="label">Working languages</div>
+              </div>
+              <div class="card kpi reveal delay3">
+                <div class="num" data-count="1" data-suffix="">—</div>
+                <div class="label">EU-based (Italy)</div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="card sideCard reveal">
+            <div class="profileTop">
+              <div class="avatar" aria-hidden="true"></div>
+              <div>
+                <div class="name">Shaikh Abdullah</div>
+                <div class="role">Marketing Manager • Import/Export Documentation</div>
+              </div>
+            </div>
+
+            <div class="chips" aria-label="Highlights">
+              <span class="chip">Customer relations</span>
+              <span class="chip">Trade documentation</span>
+              <span class="chip">Logistics coordination</span>
+              <span class="chip">Office & IT tools</span>
+            </div>
+
+            <ul class="miniList" aria-label="Quick details">
+              <li>
+                <span class="miniIcon" aria-hidden="true">⌁</span>
+                <div>
+                  <div class="miniTitle">Residence</div>
+                  <div class="miniText">Currently living in Italy (Santa Marinella, RM).</div>
+                </div>
+              </li>
+              <li>
+                <span class="miniIcon" aria-hidden="true">◎</span>
+                <div>
+                  <div class="miniTitle">Nationality</div>
+                  <div class="miniText">Pakistani.</div>
+                </div>
+              </li>
+              <li>
+                <span class="miniIcon" aria-hidden="true">⟡</span>
+                <div>
+                  <div class="miniTitle">Professional focus</div>
+                  <div class="miniText">Import/export compliance documentation and operational coordination.</div>
+                </div>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="sectionHead">
+          <div>
+            <h2>Professional profile</h2>
+            <p>Clear, business-focused overview designed for employers, partners, and international clients.</p>
+          </div>
+        </div>
+
+        <div class="twoCol">
+          <div class="card panel reveal">
+            <h3>Summary</h3>
+            <p>
+              After graduation, Shaikh Abdullah worked as an intern and then as an employee. Since 2005, he has been employed as
+              Marketing Manager at “ASIA TOWN IMPORT EXPORT” in Karachi, Pakistan, focusing on customers, documentation for international
+              trade, and transport material management.
+            </p>
+
+            <ul class="list" aria-label="Core responsibilities">
+              <li><span>Customer relations:</span> Maintain direct contact with customers and support commercial coordination.</li>
+              <li><span>Documentation:</span> Prepare import/export documents according to destination-country regulations.</li>
+              <li><span>Logistics support:</span> Select and manage transport materials to support operations.</li>
+            </ul>
+          </div>
+
+          <div class="card panel reveal">
+            <h3>Personal details</h3>
+            <div class="facts" aria-label="Personal details grid">
+              <div class="fact">
+                <div class="k">Full name</div>
+                <div class="v">Shaikh Abdullah</div>
+              </div>
+              <div class="fact">
+                <div class="k">Date of birth</div>
+                <div class="v">25 July 1971</div>
+              </div>
+              <div class="fact">
+                <div class="k">Address</div>
+                <div class="v">Via Enrico Fermi 7, 00058 Santa Marinella (RM), Italy</div>
+              </div>
+              <div class="fact">
+                <div class="k">Email</div>
+                <div class="v"><a href="mailto:email.asiatown786@gmail.com">email.asiatown786@gmail.com</a></div>
+              </div>
+            </div>
+
+            <div class="contactLinks" aria-label="Quick actions">
+              <a class="miniBtn" href="mailto:email.asiatown786@gmail.com?subject=Opportunity%20for%20Shaikh%20Abdullah">Email</a>
+              <a class="miniBtn" href="tel:+393445631923">Phone</a>
+              <button class="miniBtn" id="copyPhoneBtn" type="button">Copy phone</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="sectionHead">
+          <div>
+            <h2>Experience</h2>
+            <p>Roles and responsibilities presented in a clear, scannable format.</p>
+          </div>
+        </div>
+
+        <div class="timeline" aria-label="Experience timeline">
+          <article class="card job reveal">
+            <div>
+              <h3>Marketing Manager — ASIA TOWN IMPORT EXPORT (Karachi, Pakistan)</h3>
+              <p>
+                Manage customer relationships, prepare and handle import/export documentation aligned with destination-country regulations,
+                and select/manage transport materials for operations.
+              </p>
+            </div>
+            <div class="meta">2005 → Present</div>
+          </article>
+
+          <article class="card job reveal">
+            <div>
+              <h3>Intern → Employee (early career)</h3>
+              <p>
+                Built foundational business experience after graduation through internship and employment, strengthening organization, coordination,
+                and workplace communication skills.
+              </p>
+            </div>
+            <div class="meta">Post‑graduation</div>
+          </article>
+        </div>
+      </section>
+
+      <section id="education">
+        <div class="sectionHead">
+          <div>
+            <h2>Education</h2>
+            <p>Academic background supporting business and trade operations.</p>
+          </div>
+        </div>
+
+        <div class="card panel reveal">
+          <h3>Degree in Marketing & Business Management</h3>
+          <p>
+            Sindh University of Jamshoro (Hyderabad, Pakistan) — 1997 to 2000.
+          </p>
+          <ul class="skills" aria-label="Main subjects">
+            <li class="skill">Accounting</li>
+            <li class="skill">Import/Export</li>
+            <li class="skill">Marketing</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="languages">
+        <div class="sectionHead">
+          <div>
+            <h2>Languages</h2>
+            <p>Communication levels for international environments.</p>
+          </div>
+        </div>
+
+        <div class="twoCol">
+          <div class="card panel reveal">
+            <h3>Spoken languages</h3>
+            <div class="facts" aria-label="Languages grid">
+              <div class="fact">
+                <div class="k">Urdu</div>
+                <div class="v">Native</div>
+              </div>
+              <div class="fact">
+                <div class="k">English</div>
+                <div class="v">C1</div>
+              </div>
+              <div class="fact">
+                <div class="k">Italian</div>
+                <div class="v">B1</div>
+              </div>
+              <div class="fact">
+                <div class="k">Working style</div>
+                <div class="v">Multicultural collaboration</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card panel reveal">
+            <h3>Strengths</h3>
+            <ul class="list" aria-label="Strengths list">
+              <li><span>Interpersonal skills:</span> Developed through work experiences in Pakistan and Italy with diverse teams and cultures.</li>
+              <li><span>Organizational skills:</span> Built through university and workplace experience; able to plan shifts and manage inventories.</li>
+              <li><span>Digital skills:</span> Comfortable with computer systems, internet, and Microsoft Office.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="sectionHead">
+          <div>
+            <h2>Skills</h2>
+            <p>Professional capabilities and practical skills.</p>
+          </div>
+        </div>
+
+        <div class="twoCol">
+          <div class="card panel reveal">
+            <h3>Business & operations</h3>
+            <ul class="skills" aria-label="Business skills">
+              <li class="skill">Customer communication <small>relationships</small></li>
+              <li class="skill">Trade documentation <small>import/export</small></li>
+              <li class="skill">Coordination <small>materials & logistics</small></li>
+              <li class="skill">Organization <small>shifts & inventory</small></li>
+              <li class="skill">Office tools <small>MS Office</small></li>
+            </ul>
+          </div>
+
+          <div class="card panel reveal">
+            <h3>Practical skills</h3>
+            <p>
+              In free time, Shaikh Abdullah enjoys hands-on work with metal and wood materials and supports people with small manual tasks when needed.
+            </p>
+            <ul class="skills" aria-label="Practical skills">
+              <li class="skill">Woodwork <small>basic</small></li>
+              <li class="skill">Metalwork <small>basic</small></li>
+              <li class="skill">Problem-solving <small>hands-on</small></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="sectionHead">
+          <div>
+            <h2>Contact</h2>
+            <p>Send a message (front-end only) or contact directly by phone/email.</p>
+          </div>
+        </div>
+
+        <div class="contactGrid">
+          <div class="card panel reveal">
+            <h3>Direct contact</h3>
+            <div class="facts" aria-label="Contact details">
+              <div class="fact">
+                <div class="k">Phone</div>
+                <div class="v"><a href="tel:+393445631923">+39 344 563 1923</a></div>
+              </div>
+              <div class="fact">
+                <div class="k">Email</div>
+                <div class="v"><a href="mailto:email.asiatown786@gmail.com">email.asiatown786@gmail.com</a></div>
+              </div>
+              <div class="fact">
+                <div class="k">Address</div>
+                <div class="v">Santa Marinella (RM), Italy</div>
+              </div>
+              <div class="fact">
+                <div class="k">Availability</div>
+                <div class="v">Open to opportunities</div>
+              </div>
+            </div>
+
+            <div class="contactLinks" aria-label="Contact actions">
+              <a class="miniBtn" href="mailto:email.asiatown786@gmail.com?subject=Business%20Inquiry">Email now</a>
+              <a class="miniBtn" href="tel:+393445631923">Call now</a>
+              <button class="miniBtn" id="downloadBtn" type="button">Download CV (demo)</button>
+            </div>
+          </div>
+
+          <div class="card panel reveal">
+            <h3>Message form</h3>
+            <form id="contactForm" novalidate>
+              <div>
+                <label for="senderName">Your name</label>
+                <input id="senderName" name="senderName" autocomplete="name" placeholder="Name" required />
+              </div>
+              <div>
+                <label for="senderEmail">Your email</label>
+                <input id="senderEmail" name="senderEmail" autocomplete="email" placeholder="you@example.com" required />
+              </div>
+              <div class="full">
+                <label for="subject">Subject</label>
+                <input id="subject" name="subject" placeholder="Job opportunity / Business inquiry" required />
+              </div>
+              <div class="full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+              </div>
+
+              <div class="full formRow">
+                <span class="hint" id="formHint">This form opens your email client (no server required).</span>
+                <button class="pill primary" type="submit">
+                  <strong>Send</strong>
+                  <span aria-hidden="true">↗</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <div style="font-weight:950; color:var(--text); letter-spacing:-0.01em;">Shaikh Abdullah</div>
+          <div style="margin-top:4px;">© <span id="year"></span> • Marketing Manager • Import/Export</div>
+        </div>
+        <div class="links" aria-label="Footer links">
+          <a href="#top">Top</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const $ = (s, root=document) => root.querySelector(s);
+      const $$ = (s, root=document) => [...root.querySelectorAll(s)];
+
+      $("#year").textContent = new Date().getFullYear();
+
+      // Mobile menu
+    // Mobile menu (no optional chaining; more compatible on older mobile browsers)
+var menuBtn = document.getElementById("menuBtn");
+var mobilePanel = document.getElementById("mobilePanel");
+
+function setMenu(open) {
+  if (!menuBtn || !mobilePanel) return;
+  menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+  mobilePanel.hidden = !open;
+}
+
+if (menuBtn && mobilePanel) {
+  menuBtn.addEventListener("click", function () {
+    var isOpen = menuBtn.getAttribute("aria-expanded") === "true";
+    setMenu(!isOpen);
+  });
+
+  // Close after tapping a menu link
+  var links = mobilePanel.querySelectorAll("a");
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener("click", function () {
+      setMenu(false);
+    });
+  }
+}
+
+      $$("#mobilePanel a").forEach(a => a.addEventListener("click", () => setMenu(false)));
+
+      // Accent toggle (subtle "futuristic" shift without breaking readability)
+      const themeBtn = $("#themeBtn");
+      const applyAccent = (mode) => {
+        document.documentElement.dataset.accent = mode;
+        try { localStorage.setItem("accent", mode); } catch {}
+        if (mode === "holo") {
+          document.documentElement.style.setProperty("--a", "#00ffa8");
+          document.documentElement.style.setProperty("--b", "#22d3ee");
+          document.documentElement.style.setProperty("--c", "#a78bfa");
+        } else {
+          document.documentElement.style.removeProperty("--a");
+          document.documentElement.style.removeProperty("--b");
+          document.documentElement.style.removeProperty("--c");
+        }
+      };
+      const savedAccent = (() => { try { return localStorage.getItem("accent"); } catch { return null; } })();
+      if (savedAccent) applyAccent(savedAccent);
+
+      themeBtn?.addEventListener("click", () => {
+        const cur = document.documentElement.dataset.accent || "default";
+        applyAccent(cur === "default" ? "holo" : "default");
+      });
+
+      // Clipboard helpers
+      const copy = async (text, okMsg) => {
+        try {
+          await navigator.clipboard.writeText(text);
+          return okMsg || "Copied.";
+        } catch {
+          // Fallback
+          const ta = document.createElement("textarea");
+          ta.value = text;
+          ta.style.position = "fixed";
+          ta.style.left = "-9999px";
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand("copy");
+          document.body.removeChild(ta);
+          return okMsg || "Copied.";
+        }
+      };
+
+      $("#copyEmailBtn")?.addEventListener("click", async () => {
+        const msg = await copy("email.asiatown786@gmail.com", "Email copied.");
+        $("#copyEmailBtn").querySelector("span:last-child").textContent = msg;
+        setTimeout(() => ($("#copyEmailBtn").querySelector("span:last-child").textContent = "Copy email"), 1400);
+      });
+
+      $("#copyPhoneBtn")?.addEventListener("click", async () => {
+        const btn = $("#copyPhoneBtn");
+        const msg = await copy("+393445631923", "Phone copied.");
+        btn.textContent = msg;
+        setTimeout(() => (btn.textContent = "Copy phone"), 1400);
+      });
+
+      // Reveal with IntersectionObserver
+      const revealEls = $$(".reveal");
+      const io = ("IntersectionObserver" in window)
+        ? new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add("in");
+                io.unobserve(e.target);
+              }
+            });
+          }, { threshold: 0.15 })
+        : null;
+
+      revealEls.forEach((n) => {
+        if (!io) n.classList.add("in");
+        else io.observe(n);
+      });
+
+      // KPI “count” (lightweight)
+      const prefersReduced = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+      const counters = $$(".num[data-count]");
+      const animateCount = (node) => {
+        const to = Number(node.dataset.count || 0);
+        const suffix = node.dataset.suffix || "";
+        const prefix = node.dataset.prefix || "";
+        if (prefersReduced) {
+          node.textContent = prefix + String(to) + suffix;
+          return;
+        }
+        const duration = 900;
+        const start = performance.now();
+        const from = 0;
+
+        const step = (t) => {
+          const p = Math.min(1, (t - start) / duration);
+          const eased = 1 - Math.pow(1 - p, 3);
+          const val = Math.round(from + eased * (to - from));
+          node.textContent = prefix + val + suffix;
+          if (p < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      };
+
+      const kpiObserver = ("IntersectionObserver" in window)
+        ? new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                const n = e.target;
+                if (!n.dataset.done) {
+                  n.dataset.done = "1";
+                  animateCount(n);
+                }
+                kpiObserver.unobserve(n);
+              }
+            });
+          }, { threshold: 0.45 })
+        : null;
+
+      counters.forEach((n) => {
+        if (!kpiObserver) animateCount(n);
+        else kpiObserver.observe(n);
+      });
+
+      // Download CV (demo: creates a simple TXT)
+      $("#downloadBtn")?.addEventListener("click", () => {
+        const content =
+`Shaikh Abdullah
+Marketing Manager — Import/Export
+
+Phone: +39 344 563 1923
+Email: email.asiatown786@gmail.com
+Address: Via Enrico Fermi 7, 00058 Santa Marinella (RM), Italy
+Nationality: Pakistani
+DOB: 25 July 1971
+
+Summary:
+Marketing Manager since 2005 at ASIA TOWN IMPORT EXPORT (Karachi, Pakistan).
+Responsibilities: customer relations, import/export documentation, transport material management.
+
+Education:
+1997–2000 Degree in Marketing and Business Management — Sindh University of Jamshoro (Hyderabad, Pakistan)
+Main subjects: accounting, import/export, marketing
+
+Languages:
+Urdu (Native), English (C1), Italian (B1)
+
+Skills:
+Interpersonal, organizational (shifts/inventory), computer systems & Microsoft Office, manual skills (metal/wood).`;
+
+        const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "Shaikh_Abdullah_CV.txt";
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+      });
+
+      // Contact form: mailto draft
+      const form = $("#contactForm");
+      const hint = $("#formHint");
+      const emailOk = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+
+      form?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const senderName = $("#senderName").value.trim();
+        const senderEmail = $("#senderEmail").value.trim();
+        const subject = $("#subject").value.trim();
+        const message = $("#message").value.trim();
+
+        const problems = [];
+        if (!senderName) problems.push("Name is required.");
+        if (!emailOk(senderEmail)) problems.push("Valid email is required.");
+        if (!subject) problems.push("Subject is required.");
+        if (message.length < 12) problems.push("Message should be at least 12 characters.");
+
+        if (problems.length) {
+          hint.textContent = problems.join(" ");
+          hint.style.color = "rgba(244,114,182,.95)";
+          return;
+        }
+
+        hint.textContent = "Opening your email client…";
+        hint.style.color = "rgba(52,211,153,.95)";
+
+        const to = "email.asiatown786@gmail.com";
+        const body =
+          `Hello Shaikh Abdullah,%0D%0A%0D%0A` +
+          `${encodeURIComponent(message)}%0D%0A%0D%0A` +
+          `From:%20${encodeURIComponent(senderName)}%0D%0A` +
+          `Email:%20${encodeURIComponent(senderEmail)}`;
+
+        const url = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${body}`;
+        window.location.href = url;
+
+        form.reset();
+        setTimeout(() => {
+          hint.textContent = "This form opens your email client (no server required).";
+          hint.style.color = "";
+        }, 2200);
+      });
+
+      // Canvas starfield (lightweight, disabled if reduced motion)
+      const canvas = $("#stars");
+      const ctx = canvas?.getContext?.("2d", { alpha: true });
+      if (!canvas || !ctx || prefersReduced) return;
+
+      const DPR = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
+      let w = 0, h = 0;
+      let stars = [];
+      const STAR_COUNT = Math.round(105 * (matchMedia("(max-width: 720px)").matches ? 0.75 : 1));
+
+      function resize(){
+        const rect = canvas.getBoundingClientRect();
+        w = Math.floor(rect.width * DPR);
+        h = Math.floor(rect.height * DPR);
+        canvas.width = w;
+        canvas.height = h;
+        stars = Array.from({ length: STAR_COUNT }, () => ({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          r: (Math.random() * 1.35 + 0.45) * DPR,
+          vx: (Math.random() - 0.5) * 0.16 * DPR,
+          vy: (Math.random() - 0.5) * 0.16 * DPR,
+          a: Math.random() * 0.50 + 0.22
+        }));
+      }
+
+      let last = performance.now();
+      function tick(t){
+        const dt = Math.min(34, t - last);
+        last = t;
+
+        ctx.clearRect(0, 0, w, h);
+
+        // vignette
+        const g = ctx.createRadialGradient(w*0.55, h*0.30, 0, w*0.55, h*0.30, Math.max(w,h)*0.62);
+        g.addColorStop(0, "rgba(255,255,255,0.06)");
+        g.addColorStop(1, "rgba(255,255,255,0)");
+        ctx.fillStyle = g;
+        ctx.fillRect(0, 0, w, h);
+
+        for (const s of stars){
+          s.x += s.vx * (dt * 0.06);
+          s.y += s.vy * (dt * 0.06);
+
+          if (s.x < -20) s.x = w + 20;
+          if (s.x > w + 20) s.x = -20;
+          if (s.y < -20) s.y = h + 20;
+          if (s.y > h + 20) s.y = -20;
+
+          ctx.beginPath();
+          ctx.fillStyle = `rgba(34, 211, 238, ${s.a})`;
+          ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        requestAnimationFrame(tick);
+      }
+
+      window.addEventListener("resize", resize, { passive: true });
+      resize();
+      requestAnimationFrame(tick);
+    })();
+  </script>
+</body>
+</html>
